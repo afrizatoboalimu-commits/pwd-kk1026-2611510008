@@ -35,3 +35,4 @@ pada section#about
 13. membuat tata letak satu kolom dengan menambahkan tag grid-template-columns: 1fr; pada section#main
 14. membuat tata letak 2 kolom terpisah dengan menambahkan tag "1fr" pada section grid-template-columns: 1fr; pada section#main
 15. memgatur ukuran jarak dengan konsep gap dengan menambahkan tag gap: 16px; pada section#main
+16. membuat kolom contact menajadi satu row kolom penuh dengan menambhakan tag rid-column: 1 / -1; pada section#contact
