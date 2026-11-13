@@ -41,3 +41,4 @@ pada section#about
 19. membuat javascript eksternal, dengan membuat berkas baru dengan nama script.js lalu mengkonekkannya dengan doc HTML dengan menambahkan tag <script src="script.js"></script> pada doc HTML
 20. menambahkan tag console.log("script.js berhasil dijalankan."); pada doc script.js, lalu melakukan uji web jika berhasil muncul tulisan script.js berhasil dijalankan pada Console peramban.
 21. menerapkan konsep DOM pada JS dengan menggunakan metode pemilihan elemen menggunakan getElementById(), serta menambahkan tag pada doc JS sebagai fungsi untuk menjalankan konsep DOM itu sendiri
+22. melakukan uji coba dengan menggunakan tag document.getElementById("id-elemen"); pada console dan muncul element yang kita cari
