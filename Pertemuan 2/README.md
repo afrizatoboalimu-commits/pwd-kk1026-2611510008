@@ -50,3 +50,14 @@ pada section#about
     });
     di bawah const navToggle = document.getElementById("navToggle");
     sehingga jika tombol navigasi di klik maka muncul pemberitahuan "tombol navigasiu diklik" pada menu console
+27. menerapkan event submit dengan menambahkan tag contactForm.addEventListener("submit", (event) => {
+    console.log("Form dikirim.");
+    });
+    di bawah const contactForm = document.getElementById("contactForm");
+    sehingga ketika form diisi maka muncul pesan form dikirim pada menu console
+28. menambahkan event input dengan menambahkan tag const formFeedback = document.getElementById("formFeedback");
+
+contactForm.addEventListener("input", () => {
+formFeedback.textContent = "";
+});
+pada doc JS sehingga muncul pesan umpan balik ketika mengisi document.getElementById("formFeedback").textContent = "Contoh pesan validasi."; pada menu console, dan jika form disi maka pesan akan hilang.
