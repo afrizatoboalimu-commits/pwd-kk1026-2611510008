@@ -44,3 +44,9 @@ pada section#about
 22. melakukan uji coba dengan menggunakan tag document.getElementById("id-elemen"); pada console dan muncul element yang kita cari
 23. melakukan uji test console F3 sampai F5 tanpa perubahan tag
 24. melakukan test console dengan menambahlan tag "id="formFeedback" pada doc html lalu di uji dengan memasukkan tag pada console peramban document.getElementById("formFeedback").textContent = "Pesan pengujian DOM" maka muncul tulisan "Pesan pengujian DOM" tepat di bawah tombol kirim dan batal dan masukkan tag document.getElementById("formFeedback").textContent = ""; untuk menghapusnya kembali
+25. melakukan test dengan console pada bagian F sudah selesai tanpa merubah tag
+26. menambhakan metode addeventListener pada doc JS dengan menambahkan tag navToggle.addEventListener("click", () => {
+    console.log("Tombol navigasi diklik.");
+    });
+    di bawah const navToggle = document.getElementById("navToggle");
+    sehingga jika tombol navigasi di klik maka muncul pemberitahuan "tombol navigasiu diklik" pada menu console
