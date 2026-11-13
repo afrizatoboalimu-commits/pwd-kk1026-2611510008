@@ -38,3 +38,6 @@ pada section#about
 16. membuat kolom contact menajadi satu row kolom penuh dengan menambhakan tag rid-column: 1 / -1; pada section#contact
 17. menerapkan style.css agar saat di buka dengan HandPhone dan laptop itu tapilan tata letak nya berbeda, dengan menerapkan Breakpoint dan Media Query serta Penyesuaian Navigasi dan Contact pada Viewport Lebih Lebar
 18. menambahkan javascript internal di dalam doc HTML, lalu melakukan test dan muncul teks "javascript berhasil dijalankan" pada console permaban
+19. membuat javascript eksternal, dengan membuat berkas baru dengan nama script.js lalu mengkonekkannya dengan doc HTML dengan menambahkan tag <script src="script.js"></script> pada doc HTML
+20. menambahkan tag console.log("script.js berhasil dijalankan."); pada doc script.js, lalu melakukan uji web jika berhasil muncul tulisan script.js berhasil dijalankan pada Console peramban.
+21. menerapkan konsep DOM pada JS dengan menggunakan metode pemilihan elemen menggunakan getElementById(), serta menambahkan tag pada doc JS sebagai fungsi untuk menjalankan konsep DOM itu sendiri
