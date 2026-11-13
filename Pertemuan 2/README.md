@@ -34,3 +34,4 @@ pada section#about
 12. membuat tata letak dengan mekanisme grid dengan memambhakan tag display ; grid, pada tahap ini belu merubah apapun
 13. membuat tata letak satu kolom dengan menambahkan tag grid-template-columns: 1fr; pada section#main
 14. membuat tata letak 2 kolom terpisah dengan menambahkan tag "1fr" pada section grid-template-columns: 1fr; pada section#main
+15. memgatur ukuran jarak dengan konsep gap dengan menambahkan tag gap: 16px; pada section#main
