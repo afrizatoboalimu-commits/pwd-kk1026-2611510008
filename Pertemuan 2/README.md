@@ -30,3 +30,4 @@ pada section#about
 
 9. menyesuaikan margin sesuai dengan ketentuan serta menambahkan tag input di dalam section#contact style.css
 10. menambahkan style box pada footer yang terdiri dari warna, ukuran teks dan margin
+11. melakukan Perataan dengan justify-content dan align-items dengan menambhakan tag nav ul setelah section#header1 serta melakukan Penerapan Flexbox pada Navigasi
