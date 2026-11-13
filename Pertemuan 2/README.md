@@ -5,3 +5,10 @@ pada pertemuan ke-2, saya :
 1. saya menyiapkan artefak pertemuan-01 sebagai baseline pertemuan-02, hasilnya pada peretmuan-02 halaman masih sama dengan pertemuan-01
 2. menambah formulir pada section#contact, adapun formulir yang ditambahkan belum ada styling.
 3. menambahkan style CSS dasar pada section#tentang saya dan kontak, yang di tambahkan adalah ukuran teks, color teks.
+4. memisahkan style css dari file index dengan membuat file baru #style.css, lalu mengkonekkan dengan menambahkan tag <link rel="stylesheet" href="style.css" /> di dalam tag head
+5. menerapkan model box dengan menabahkan tag berikut pada urutan pertama style css
+
+- {
+  box-sizing: border-box;
+  }
+  lalu di bawahnya menambahkan section #home
