@@ -12,3 +12,5 @@ pada pertemuan ke-2, saya :
   box-sizing: border-box;
   }
   lalu di bawahnya menambahkan section #home
+
+6. menambahkan style box, warna,ukuran tulisan, dan jenis tulisan pada bagian header, tag di tambahkan sebelum setction#home pada style css.
