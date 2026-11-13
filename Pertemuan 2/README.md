@@ -42,3 +42,5 @@ pada section#about
 20. menambahkan tag console.log("script.js berhasil dijalankan."); pada doc script.js, lalu melakukan uji web jika berhasil muncul tulisan script.js berhasil dijalankan pada Console peramban.
 21. menerapkan konsep DOM pada JS dengan menggunakan metode pemilihan elemen menggunakan getElementById(), serta menambahkan tag pada doc JS sebagai fungsi untuk menjalankan konsep DOM itu sendiri
 22. melakukan uji coba dengan menggunakan tag document.getElementById("id-elemen"); pada console dan muncul element yang kita cari
+23. melakukan uji test console F3 sampai F5 tanpa perubahan tag
+24. melakukan test console dengan menambahlan tag "id="formFeedback" pada doc html lalu di uji dengan memasukkan tag pada console peramban document.getElementById("formFeedback").textContent = "Pesan pengujian DOM" maka muncul tulisan "Pesan pengujian DOM" tepat di bawah tombol kirim dan batal dan masukkan tag document.getElementById("formFeedback").textContent = ""; untuk menghapusnya kembali
