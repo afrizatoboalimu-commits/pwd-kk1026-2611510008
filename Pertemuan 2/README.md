@@ -14,3 +14,4 @@ pada pertemuan ke-2, saya :
   lalu di bawahnya menambahkan section #home
 
 6. menambahkan style box, warna,ukuran tulisan, dan jenis tulisan pada bagian header, tag di tambahkan sebelum setction#home pada style css.
+7. menambahkan style.css dengan meanambahkan tag pada section#home yang terdiri dari ukuran teks,warna,border
