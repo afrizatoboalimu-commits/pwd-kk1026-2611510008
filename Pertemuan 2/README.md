@@ -63,4 +63,5 @@ formFeedback.textContent = "";
 pada doc JS sehingga muncul pesan umpan balik ketika mengisi document.getElementById("formFeedback").textContent = "Contoh pesan validasi."; pada menu console, dan jika form disi maka pesan akan hilang.
 
 29. menambahkan event reset pada event input dengan hasil jika from diisi lalu mengklik tombol batal makan otomatis form akan bersih dan teks contoh pesan validasi akan hilang
-30. merubah tag console.log("Form dikirim."); menjadi event.preventDefault(); sehingga ketika di klik form diisi dan di kirim tidak lagi ada penambahan url maupun console sehingga menjadi tetap tidak reload
+30. merubah fungsi tag console.log("Form dikirim."); menjadi event.preventDefault(); sehingga ketika di klik form diisi dan di kirim tidak lagi ada penambahan url maupun console sehingga menjadi tetap tidak reload
+31. menambahkan tombol navigasi pada struktur html sebagai dasar untuk membangun interaksi navigasi responsif, pada tahap ini cukup pastikan tombol navigasi muncul pada bagian header di pojok kiri atas
