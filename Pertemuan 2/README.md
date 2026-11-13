@@ -15,3 +15,15 @@ pada pertemuan ke-2, saya :
 
 6. menambahkan style box, warna,ukuran tulisan, dan jenis tulisan pada bagian header, tag di tambahkan sebelum setction#home pada style css.
 7. menambahkan style.css dengan meanambahkan tag pada section#home yang terdiri dari ukuran teks,warna,border
+8. menyesuaikan margin pada bagian tentang saya dengan meanambahkan ketentuan berikut #about {
+   margin: 0;
+   }
+
+#about h2 {
+margin-top: 0;
+}
+
+#about p {
+line-height: 1.5;
+}
+pada section#about
