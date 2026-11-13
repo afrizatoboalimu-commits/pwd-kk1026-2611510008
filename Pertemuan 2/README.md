@@ -31,3 +31,6 @@ pada section#about
 9. menyesuaikan margin sesuai dengan ketentuan serta menambahkan tag input di dalam section#contact style.css
 10. menambahkan style box pada footer yang terdiri dari warna, ukuran teks dan margin
 11. melakukan Perataan dengan justify-content dan align-items dengan menambhakan tag nav ul setelah section#header1 serta melakukan Penerapan Flexbox pada Navigasi
+12. membuat tata letak dengan mekanisme grid dengan memambhakan tag display ; grid, pada tahap ini belu merubah apapun
+13. membuat tata letak satu kolom dengan menambahkan tag grid-template-columns: 1fr; pada section#main
+14. membuat tata letak 2 kolom terpisah dengan menambahkan tag "1fr" pada section grid-template-columns: 1fr; pada section#main
