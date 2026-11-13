@@ -27,3 +27,5 @@ margin-top: 0;
 line-height: 1.5;
 }
 pada section#about
+
+9. menyesuaikan margin sesuai dengan ketentuan serta menambahkan tag input di dalam section#contact style.css
