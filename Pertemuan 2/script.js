@@ -16,3 +16,7 @@ const formFeedback = document.getElementById("formFeedback");
 contactForm.addEventListener("input", () => {
   formFeedback.textContent = "";
 });
+
+contactForm.addEventListener("reset", () => {
+  formFeedback.textContent = "";
+});
