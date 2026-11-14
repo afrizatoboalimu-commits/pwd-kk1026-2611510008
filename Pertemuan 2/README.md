@@ -65,3 +65,4 @@ pada doc JS sehingga muncul pesan umpan balik ketika mengisi document.getElement
 29. menambahkan event reset pada event input dengan hasil jika from diisi lalu mengklik tombol batal makan otomatis form akan bersih dan teks contoh pesan validasi akan hilang
 30. merubah fungsi tag console.log("Form dikirim."); menjadi event.preventDefault(); sehingga ketika di klik form diisi dan di kirim tidak lagi ada penambahan url maupun console sehingga menjadi tetap tidak reload
 31. menambahkan tombol navigasi pada struktur html sebagai dasar untuk membangun interaksi navigasi responsif, pada tahap ini cukup pastikan tombol navigasi muncul pada bagian header di pojok kiri atas
+32. menambahkan class pada CSS dengan classList.toggle() dan menambahkan fungsi pada JS yang bertujuan agar JavaScript tidak mengatur seluruh tampilan menu secara langsung. JavaScript mengubah class pada elemen, sedangkan CSS menentukan tampilan elemen berdasarkan class tersebut.

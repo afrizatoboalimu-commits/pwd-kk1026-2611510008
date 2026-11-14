@@ -41,6 +41,12 @@ nav a {
   text-decoration: none;
 }
 
+#navMenu.nav-open {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+}
+
 main {
   display: grid;
   grid-template-columns: 1fr;

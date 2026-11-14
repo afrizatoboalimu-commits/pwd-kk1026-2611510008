@@ -1,7 +1,7 @@
 const navToggle = document.getElementById("navToggle");
 
 navToggle.addEventListener("click", () => {
-  console.log("Tombol navigasi diklik.");
+  const isOpen = navMenu.classList.toggle("nav-open");
 });
 
 const navMenu = document.getElementById("navMenu");
