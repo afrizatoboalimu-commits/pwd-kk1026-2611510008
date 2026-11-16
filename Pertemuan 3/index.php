@@ -5,7 +5,7 @@ $nim = "2611510008";
 $namaMahasiswa = "Afriza Hendriansyah";
 $programStudi = "TI";
 $tahunAkademik = "2026/2027";
-$semester = 1;
+$semester = 8;
 $ipk = 0;
 $statusAktif = true;
 $catatanTambahan = null;
@@ -18,6 +18,15 @@ $batasSemester = 8;
 $sisaSemester = $batasSemester - $semester;
 $semesterValid = $semester >= 1 && $semester <= $batasSemester;
 $statusSemester = ($semesterValid && $statusAktif) ? "Sesuai rentang" : "Perlu diperiksa";
+
+// Bagian 3: Percabangan if-elseif-else 
+if ($semester < 3) {
+  $keteranganSemester = "Semester awal";
+} elseif ($semester <= 6) {
+  $keteranganSemester = "Semester menengah";
+} else {
+  $keteranganSemester = "Semester akhir";
+}
 ?>
 
 
@@ -75,6 +84,7 @@ $statusSemester = ($semesterValid && $statusAktif) ? "Sesuai rentang" : "Perlu d
           <p>Sisa semester hingga batas: <?php echo $sisaSemester; ?></p>
           <p>Pemeriksaan rentang semester: <?php echo $statusSemester; ?></p>
           <p>Saya mahasiswa Program Studi Teknik Informatika.</p>
+          <p>Semester: <?php echo $semester . " (" . $keteranganSemester . ")"; ?></p>
 
           <h3>Target Belajar</h3>
 
