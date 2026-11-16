@@ -13,3 +13,5 @@ pengembangan dari pertemuan 02, pengembangan yang dilakukan sebagai berikut:
 9. menambahkan konstanta php
 10. menguji mengecho dan print variabel php ke body index dan hasilnya berhasil tanpa eror
 11. memunculkan konstantan untuk bagian mata kuliah dan profil git hub dan hasilnya berhasil tanpa eror
+12. menambahkan opertaor aritmatika
+13. menguji dengan mengecho pada bagian section#about dan hasilnya benar
