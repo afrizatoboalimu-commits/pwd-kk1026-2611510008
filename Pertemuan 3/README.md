@@ -8,3 +8,4 @@ pengembangan dari pertemuan 02, pengembangan yang dilakukan sebagai berikut:
 4. menjalankan laragon
 5. mengubah nama document index.html menjadi index.php
 6. melakukan uji setelah mengubah nama document , dan hasilnya normal tidak ada kendala
+7. melakukan uji sementara dengan menambahkan tag php dengan echo ; php berhasil dijaklankan , hasilnya berhasil tanpa eror, lalu di cek dengan menekan ctrl+u untk melihat apakah tag php kluar sebagai kode mentah atau tidak
