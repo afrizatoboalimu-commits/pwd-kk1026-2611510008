@@ -18,3 +18,4 @@ pengembangan dari pertemuan 02, pengembangan yang dilakukan sebagai berikut:
 14. menambahkan opertaor aritmatika untuk menrapkan rentang semester, lalu menguji dengan semester sudah di btasi yaitu 8 jadi jika hasil nya - maka hasil yang keluar "perlu di periksa" dan sbaliknya.
 15. menerapkan percabangan if-elseif-else untuk ketrangan semseter yang di taruh pada section#about yaitu jika semester <=3 = "semester awal" jika <=6 = "semester menengah" dan selebihnhya = "semester akhir".
 16. menerapkan operator Ternary untuk Menentukan Nama Program Studi dan Status Mahasiswa, setelah itu mengujinya dengan mengecho opratro ternary tersebut pada section#about dan hasilnya berahsil tanpa eror
+17. menambahkan percabangan switch-case-default, lalu mengecho pad asection#about dan hasilnya berhasil.
