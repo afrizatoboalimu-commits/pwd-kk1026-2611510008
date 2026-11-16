@@ -12,3 +12,4 @@ pengembangan dari pertemuan 02, pengembangan yang dilakukan sebagai berikut:
 8. menambahkan deklarasi variabel php
 9. menambahkan konstanta php
 10. menguji mengecho dan print variabel php ke body index dan hasilnya berhasil tanpa eror
+11. memunculkan konstantan untuk bagian mata kuliah dan profil git hub dan hasilnya berhasil tanpa eror

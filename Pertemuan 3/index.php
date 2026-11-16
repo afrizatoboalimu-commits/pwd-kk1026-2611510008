@@ -82,7 +82,7 @@ const PROFIL_GITHUB = "Captani";
 
       <p>
         Kunjungi
-        <a href="https://github.com/username">profil GitHub saya</a>.
+        <a href="https://github.com/afrizatoboalimu-commits" <?= PROFIL_GITHUB ?>">profil GitHub saya</a>.
       </p>
 
       <form id="contactForm" action="index.html" method="get" novalidate>
