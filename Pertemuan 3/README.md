@@ -15,3 +15,4 @@ pengembangan dari pertemuan 02, pengembangan yang dilakukan sebagai berikut:
 11. memunculkan konstantan untuk bagian mata kuliah dan profil git hub dan hasilnya berhasil tanpa eror
 12. menambahkan opertaor aritmatika
 13. menguji dengan mengecho pada bagian section#about dan hasilnya benar
+14. menambahkan opertaor aritmatika untuk menrapkan rentang semester, lalu menguji dengan semester sudah di btasi yaitu 8 jadi jika hasil nya - maka hasil yang keluar "perlu di periksa" dan sbaliknya.
