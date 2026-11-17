@@ -28,3 +28,4 @@ pengembangan dari pertemuan 02, pengembangan yang dilakukan sebagai berikut:
 24. menambahkan parameter get, lalu menguji dengan menambahkan ?=budi anduk lalu enter dan muncul "nama yang diterima = budi anduk" pada bagian atas web.
 25. menambahkan tag ontactForm.submit(); pada javascript yang berfungsi jika formulir diisi maka seluruh data yang diisi muncul pada bagian URL
 26. melakukan uji mengisi lengkap formulir lalu kirim dan muncul seluruh data yang di input pada bagian url.
+27. membuat artefak baru dengan mengcopy index.php lalu paste pada folder yang sama dan ubah menjadi indexGET.php lalu memambhakan tag action=indexGET.php, setelah itu melakukan uji dengan login web pada index.php tetpa menjadi web utama tanpa ada perubahan apapun.
