@@ -21,3 +21,4 @@ pengembangan dari pertemuan 02, pengembangan yang dilakukan sebagai berikut:
 17. menambahkan percabangan switch-case-default, lalu mengecho pad asection#about dan hasilnya berhasil.
 18. menambahkan perulangan for untuk menentukan target belajar, Perulangan tersebut menghasilkan lima elemen daftar. Empat target pertama ditentukan melalui sedangkan target kelima menggunakan default . Penerapan ini tidak menggunakan aray. setelah itu di uji pada web dan hasilya berahasil tanpa eror
 19. menrapkan perulangan while untuk menampilkan nomor semester dengan ketentuan $nomorsemester di mulai dari 1 nilainya tidak melebihi 3, kemudian nilai variabel ditambah satu pada setiap pengulangan.
+20. Menampilkan IPK dengan Fungsi number_format() pada section#about lalu mengujinya danhasilnya benar tanpa eror.

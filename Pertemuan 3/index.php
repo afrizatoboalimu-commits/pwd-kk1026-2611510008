@@ -5,8 +5,8 @@ $nim = "2611510008";
 $namaMahasiswa = "Afriza Hendriansyah";
 $programStudi = "TI";
 $tahunAkademik = "2026/2027";
-$semester = 8;
-$ipk = 0;
+$semester = 1;
+$ipk = 4;
 $statusAktif = true;
 $catatanTambahan = null;
 
@@ -101,6 +101,7 @@ switch ($programStudi) {
           <p>Program Studi: <?php echo $namaProdi . " (" . $programStudi . ")"; ?></p>
           <p>Status mahasiswa: <?php echo $statusAktif ? "Aktif" : "Tidak aktif"; ?></p>
           <p>Fokus program studi: <?php echo $fokusProgramStudi; ?></p>
+          <p>IPK: <?php echo number_format($ipk, 2, ',', '.'); ?></p>
 
           <h3>Target Belajar (Perulangan for)</h3>
           <ol>
