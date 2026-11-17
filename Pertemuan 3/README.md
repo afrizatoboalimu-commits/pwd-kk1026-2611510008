@@ -24,3 +24,4 @@ pengembangan dari pertemuan 02, pengembangan yang dilakukan sebagai berikut:
 20. Menampilkan IPK dengan Fungsi number_format() pada section#about lalu mengujinya danhasilnya benar tanpa eror.
 21. mmemriksa nilai null dengan mengecho nya pada section#about dengan dengan hasil jika $catatantambahan = null maka hasil yang di keluarkan adalah catatan tamabahan = belum ada , stelah itu saya menguji dengan merubah variabel nilai null dengan "catatn praktik php" maka kluar variabel tersebut.
 22. merubah tag footer yang masih menggunakan kode statis dengan mengecho nilai php untuk nama tahun dan nim mahasiswa
+23. penyesuaikan atribut action pada formulir dengan mengganti action = index.html menjadi action = index.php yang terdapat pada section#contactform
