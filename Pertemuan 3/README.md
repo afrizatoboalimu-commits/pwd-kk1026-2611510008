@@ -26,3 +26,5 @@ pengembangan dari pertemuan 02, pengembangan yang dilakukan sebagai berikut:
 22. merubah tag footer yang masih menggunakan kode statis dengan mengecho nilai php untuk nama tahun dan nim mahasiswa
 23. penyesuaikan atribut action pada formulir dengan mengganti action = index.html menjadi action = index.php yang terdapat pada section#contactform
 24. menambahkan parameter get, lalu menguji dengan menambahkan ?=budi anduk lalu enter dan muncul "nama yang diterima = budi anduk" pada bagian atas web.
+25. menambahkan tag ontactForm.submit(); pada javascript yang berfungsi jika formulir diisi maka seluruh data yang diisi muncul pada bagian URL
+26. melakukan uji mengisi lengkap formulir lalu kirim dan muncul seluruh data yang di input pada bagian url.
