@@ -259,7 +259,7 @@ switch ($programStudi) {
   </main>
 
   <footer>
-    <p>&copy; 2026 AFRIZA HENDRIANSYAH [2611510008]</p>
+    <p>&copy; <?= date("Y") ?> <?php echo $namaMahasiswa; ?> [<?= $nim ?>]</p>
   </footer>
   <script src="script.js"></script>
 </body>
