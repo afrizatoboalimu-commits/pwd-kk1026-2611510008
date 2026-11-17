@@ -102,6 +102,8 @@ switch ($programStudi) {
           <p>Status mahasiswa: <?php echo $statusAktif ? "Aktif" : "Tidak aktif"; ?></p>
           <p>Fokus program studi: <?php echo $fokusProgramStudi; ?></p>
           <p>IPK: <?php echo number_format($ipk, 2, ',', '.'); ?></p>
+          <p>Catatan tambahan: <?php echo $catatanTambahan === null ? "Belum ada" : $catatanTambahan;
+                                ?></p>
 
           <h3>Target Belajar (Perulangan for)</h3>
           <ol>
