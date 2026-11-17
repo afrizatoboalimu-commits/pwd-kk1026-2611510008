@@ -30,3 +30,4 @@ pengembangan dari pertemuan 02, pengembangan yang dilakukan sebagai berikut:
 26. melakukan uji mengisi lengkap formulir lalu kirim dan muncul seluruh data yang di input pada bagian url.
 27. membuat artefak baru dengan mengcopy index.php lalu paste pada folder yang sama dan ubah menjadi indexGET.php lalu memambhakan tag action=indexGET.php, setelah itu melakukan uji dengan login web pada index.php tetpa menjadi web utama tanpa ada perubahan apapun.
 28. mengubah formulir utama menjadi menggunakan method=POST, pada bagian ini pastikan tampilan web tetap sama tanpa perubahan apapun.
+29. memodifikasi kode php agar penerimaan formulir menggunakan POST bukan GET lagi, setelah itu melakukan uji dan hasilnya data yang di terima sudah menggunakan methode post.
