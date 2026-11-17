@@ -29,3 +29,4 @@ pengembangan dari pertemuan 02, pengembangan yang dilakukan sebagai berikut:
 25. menambahkan tag ontactForm.submit(); pada javascript yang berfungsi jika formulir diisi maka seluruh data yang diisi muncul pada bagian URL
 26. melakukan uji mengisi lengkap formulir lalu kirim dan muncul seluruh data yang di input pada bagian url.
 27. membuat artefak baru dengan mengcopy index.php lalu paste pada folder yang sama dan ubah menjadi indexGET.php lalu memambhakan tag action=indexGET.php, setelah itu melakukan uji dengan login web pada index.php tetpa menjadi web utama tanpa ada perubahan apapun.
+28. mengubah formulir utama menjadi menggunakan method=POST, pada bagian ini pastikan tampilan web tetap sama tanpa perubahan apapun.

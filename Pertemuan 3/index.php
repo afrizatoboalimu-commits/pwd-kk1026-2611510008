@@ -160,7 +160,7 @@ if (isset($_GET['nama'])) {
         <a href="https://github.com/afrizatoboalimu-commits" <?= PROFIL_GITHUB ?>">profil GitHub saya</a>.
       </p>
 
-      <form id="contactForm" action="index.php" method="get" novalidate>
+      <form id="contactForm" action="index.php" method="POST" novalidate>
         <div class="form-group">
           <label for="nama">Nama Lengkap</label><br />
 
