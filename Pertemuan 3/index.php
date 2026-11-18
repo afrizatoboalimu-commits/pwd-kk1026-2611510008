@@ -42,18 +42,79 @@ switch ($programStudi) {
     $fokusProgramStudi = "Belum ditentukan";
 }
 
-// P7: penggunaan GET 
-if (isset($_POST['nama'])) {
-  $nama = $_POST['nama'];
-  echo "Nama yang diterima: " . htmlspecialchars($nama, ENT_QUOTES, 'UTF-8');
-}
-$email = $_POST['email'] ?? '';
-$semesterForm = $_POST['semester'] ?? '';
-$tanggal = $_POST['tanggal'] ?? '';
-$jenisPesan = $_POST['jenis_pesan'] ?? '';
-$prodi = $_POST['prodi'] ?? '';
-$pesan = $_POST['pesan'] ?? '';
+// F.5: Normalisasi data masukan (dilakukan sebelum validasi)
+$nama = trim((string) ($_POST['nama'] ?? ''));
+$email = trim((string) ($_POST['email'] ?? ''));
+$semesterForm = trim((string) ($_POST['semester'] ?? ''));
+$jenisPesan = trim((string) ($_POST['jenis_pesan'] ?? ''));
+$prodi = trim((string) ($_POST['prodi'] ?? ''));
+$pesan = trim((string) ($_POST['pesan'] ?? ''));
+$tanggal = trim((string) ($_POST['tanggal'] ?? ''));
 $minat = $_POST['minat'] ?? [];
+
+$pesankesalahan = '';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  // F.2: Memeriksa keberadaan dan kelengkapan data
+  if ($nama === '') {
+    $pesankesalahan .= 'Nama lengkap wajib diisi. ';
+  }
+  if ($email === '') {
+    $pesankesalahan .= 'Email wajib diisi. ';
+  }
+  if ($semesterForm === '') {
+    $pesankesalahan .= 'Semester wajib diisi. ';
+  }
+  if ($tanggal === '') {
+    $pesankesalahan .= 'Tanggal kunjungan wajib diisi. ';
+  }
+  if ($jenisPesan === '') {
+    $pesankesalahan .= 'Jenis pesan wajib dipilih. ';
+  }
+  if ($prodi === '') {
+    $pesankesalahan .= 'Program studi wajib dipilih. ';
+  }
+  if ($pesan === '') {
+    $pesankesalahan .= 'Pesan wajib diisi. ';
+  }
+  if (empty($minat)) {
+    $pesankesalahan .= 'Minat wajib dipilih minimal satu. ';
+  }
+
+  // F.3: Memvalidasi format dan tipe data
+  if ($semesterForm !== '') {
+    $semesterValid = filter_var($semesterForm, FILTER_VALIDATE_INT);
+    if ($semesterValid === false || $semesterValid < 1 || $semesterValid > 14) {
+      $pesankesalahan .= 'Semester harus berupa bilangan bulat antara 1 dan 14. ';
+    }
+  }
+
+  if ($email !== '') {
+    if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
+      $pesankesalahan .= 'Format email tidak valid. ';
+    }
+  }
+
+  // F.4: Memvalidasi nilai pilihan formulir (whitelist)
+  if (!in_array($jenisPesan, ['pertanyaan', 'saran'], true)) {
+    $pesankesalahan .= 'Jenis pesan tidak valid. ';
+  }
+  if (!in_array($prodi, ['SI', 'TI'], true)) {
+    $pesankesalahan .= 'Program studi tidak valid. ';
+  }
+
+  $minatDiizinkan = ['HTML', 'CSS'];
+  if (!is_array($minat)) {
+    $pesankesalahan .= 'Format pilihan topik tidak valid. ';
+  } else {
+    foreach ($minat as $topik) {
+      if (!in_array($topik, $minatDiizinkan, true)) {
+        $pesankesalahan .= 'Pilihan topik tidak valid. ';
+        break;
+      }
+    }
+  }
+}
 ?>
 
 
@@ -161,6 +222,11 @@ $minat = $_POST['minat'] ?? [];
 
     <section id="contact">
       <h2>Kontak</h2>
+      <?php if ($pesankesalahan !== ''): ?>
+        <p class="form-feedback-error">
+          <?= htmlspecialchars($pesankesalahan, ENT_QUOTES, 'UTF-8') ?>
+        </p>
+      <?php endif; ?>
 
       <p>
         Kunjungi
