@@ -1,4 +1,5 @@
 <?php
+session_start();
 // P6: PHP dasar dan pemrograman sisi peladen 
 // Bagian 1: Variabel dan konstanta 
 $nim = "2611510008";
@@ -115,8 +116,34 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
   }
 }
-?>
 
+// G.2: Simpan hasil pemrosesan POST ke session lalu redirect (PRG)
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  $_SESSION['pesankesalahan'] = $pesankesalahan;
+  $_SESSION['nama'] = $nama;
+  $_SESSION['email'] = $email;
+  $_SESSION['semester'] = $semesterForm;
+  $_SESSION['tanggal'] = $tanggal;
+  $_SESSION['jenis_pesan'] = $jenisPesan;
+  $_SESSION['prodi'] = $prodi;
+  $_SESSION['minat'] = $minat;
+  $_SESSION['pesan'] = $pesan;
+
+  header('Location: index.php');
+  exit;
+}
+
+// Ambil kembali data dari session setelah redirect (permintaan GET)
+$pesankesalahan = $_SESSION['pesankesalahan'] ?? '';
+$nama = $_SESSION['nama'] ?? '';
+$email = $_SESSION['email'] ?? '';
+$semesterForm = $_SESSION['semester'] ?? '';
+$tanggal = $_SESSION['tanggal'] ?? date("Y-m-d");
+$jenisPesan = $_SESSION['jenis_pesan'] ?? '';
+$prodi = $_SESSION['prodi'] ?? '';
+$minat = $_SESSION['minat'] ?? [];
+$pesan = $_SESSION['pesan'] ?? '';
+?>
 
 <!doctype html>
 <html lang="id">
@@ -226,6 +253,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <p class="form-feedback-error">
           <?= htmlspecialchars($pesankesalahan, ENT_QUOTES, 'UTF-8') ?>
         </p>
+        <?php unset($_SESSION['pesankesalahan']); ?>
       <?php endif; ?>
 
       <p>
@@ -334,7 +362,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <button type="reset">Batal</button>
         <p id="formFeedback"></p>
       </form>
-      <?php if ($_SERVER['REQUEST_METHOD'] === 'POST'): ?>
+      <?php if (!empty($nama)): ?>
         <h3>Data yang Diterima Peladen</h3>
         <p>Nama: <?= htmlspecialchars($nama, ENT_QUOTES, 'UTF-8') ?></p>
         <p>Email: <?= htmlspecialchars($email, ENT_QUOTES, 'UTF-8') ?></p>
