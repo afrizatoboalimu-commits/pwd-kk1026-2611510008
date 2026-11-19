@@ -10,3 +10,5 @@ pada UTS saya melakukan :
 8. menambahkan tag #seminar pada css section #contact #seminar {
    grid-column: 1 / -1;
    } agar di layar desktop section seminar juga membentang penuh 2 kolom seperti #contact dan menyusun kebawah saat tampilan mobile.
+9. melakukan pengujian satu persatu codingan yang saya tambahkan, yaitu menambahkan menu pendaftaran seminar pada navigasi dan menambahakn form nya di bawah form kontak, pengjuian di lakukan satu persatu dari navigasi, validasi form hingga hasil input yang keluar
+10. melakukan pengujian apakah fitur lama masih aktif tanpa ada perubahan
