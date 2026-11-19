@@ -279,6 +279,53 @@ switch ($programStudi) {
 				</article>
 			<?php endif; ?>
 		</section>
+
+		<section id="seminar">
+			<h2>Pendaftaran Seminar Teknologi</h2>
+
+			<form id="seminarForm" class="js-seminar-form" action="index.php" method="post" novalidate>
+				<input type="hidden" name="form_type" value="seminar" />
+
+				<div class="form-group">
+					<label for="nama_peserta">Nama Peserta</label><br />
+					<input class="input-form" type="text" id="nama_peserta" name="nama_peserta" placeholder="Masukkan nama peserta" minlength="3" maxlength="50" required />
+				</div>
+
+				<div class="form-group">
+					<label for="nim_peserta">NIM</label><br />
+					<input class="input-form" type="text" id="nim_peserta" name="nim_peserta" placeholder="Masukkan NIM (contoh: 211510008)" pattern="[0-9]{8,12}" maxlength="12" required />
+				</div>
+
+				<div class="form-group">
+					<label for="prodi_peserta">Program Studi</label><br />
+					<select class="input-form" id="prodi_peserta" name="prodi_peserta" required>
+						<option value="">-- Pilih Program Studi --</option>
+						<option value="SI">Sistem Informasi</option>
+						<option value="TI">Teknik Informatika</option>
+					</select>
+				</div>
+
+				<div class="form-group">
+					<label for="pilihan_seminar">Pilihan Seminar</label><br />
+					<select class="input-form" id="pilihan_seminar" name="pilihan_seminar" required>
+						<option value="">-- Pilih Topik Seminar --</option>
+						<option value="Artificial Intelligence">Artificial Intelligence</option>
+						<option value="Web Development">Web Development</option>
+						<option value="Cyber Security">Cyber Security</option>
+						<option value="Data Analytics">Data Analytics</option>
+					</select>
+				</div>
+
+				<div class="form-group">
+					<label for="alasan_seminar">Alasan Mengikuti Seminar</label><br />
+					<textarea class="input-form" id="alasan_seminar" name="alasan_seminar" minlength="10" maxlength="300" placeholder="Tuliskan alasan Anda mengikuti seminar ini" required></textarea>
+				</div>
+
+				<button type="submit">Kirim</button>
+				<button type="reset">Batal</button>
+				<p id="seminarFeedback" class="form-feedback" aria-live="polite"></p>
+			</form>
+		</section>
 	</main>
 
 	<footer>
