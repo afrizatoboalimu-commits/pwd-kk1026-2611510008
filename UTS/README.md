@@ -7,3 +7,6 @@ pada UTS saya melakukan :
 5. menambahkan pemrosesan post, validasi php, dan prg untuk seminar, semua metode sama persis dengan yang ada pada form kontak sbelumnya baik dari validasi, PRG dan lainnya.
 6. menambahkan validasi javascript pada form seminar, sehingga ketika form tidak diisi muncul pesan validasi di bawah, dan ketika form diisi maka muncul data yang di kirm di bwaah form, dan form akan kosong otomatis.
 7. menambahkan style css pada form seminar dengan menambahakn tag menyesuaikan dengan section#contact sehingga style nya pun sama.
+8. menambahkan tag #seminar pada css section #contact #seminar {
+   grid-column: 1 / -1;
+   } agar di layar desktop section seminar juga membentang penuh 2 kolom seperti #contact dan menyusun kebawah saat tampilan mobile.

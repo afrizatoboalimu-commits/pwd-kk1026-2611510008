@@ -234,7 +234,7 @@ footer p {
     grid-template-columns: 1fr 1fr;
   }
 
-  #contact {
+  #contact #seminar {
     grid-column: 1 / -1;
   }
 
