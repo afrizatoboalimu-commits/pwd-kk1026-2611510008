@@ -17,6 +17,50 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 		$minat = [];
 	}
 
+	if (($_POST["form_type"] ?? "") === "seminar") {
+		$namaPeserta = trim((string) ($_POST["nama_peserta"] ?? ""));
+		$nimPeserta = trim((string) ($_POST["nim_peserta"] ?? ""));
+		$prodiPeserta = trim((string) ($_POST["prodi_peserta"] ?? ""));
+		$pilihanSeminar = trim((string) ($_POST["pilihan_seminar"] ?? ""));
+		$alasanSeminar = trim((string) ($_POST["alasan_seminar"] ?? ""));
+
+		$daftarSeminarValid = ["Artificial Intelligence", "Web Development", "Cyber Security", "Data Analytics"];
+		$daftarProdiValid = ["SI", "TI"];
+		$errorsSeminar = [];
+
+		if (mb_strlen($namaPeserta) < 3) {
+			$errorsSeminar[] = "Nama peserta wajib diisi minimal 3 karakter.";
+		}
+		if ($nimPeserta === "" || !ctype_digit($nimPeserta)) {
+			$errorsSeminar[] = "NIM wajib diisi dan hanya boleh berisi angka.";
+		}
+		if (!in_array($prodiPeserta, $daftarProdiValid, true)) {
+			$errorsSeminar[] = "Program studi tidak valid.";
+		}
+		if (!in_array($pilihanSeminar, $daftarSeminarValid, true)) {
+			$errorsSeminar[] = "Pilihan seminar tidak valid.";
+		}
+		if (mb_strlen($alasanSeminar) < 10) {
+			$errorsSeminar[] = "Alasan mengikuti seminar minimal 10 karakter.";
+		}
+
+		if (empty($errorsSeminar)) {
+			$_SESSION["seminar_data"] = [
+				"nama_peserta" => $namaPeserta,
+				"nim_peserta" => $nimPeserta,
+				"prodi_peserta" => $prodiPeserta,
+				"pilihan_seminar" => $pilihanSeminar,
+				"alasan_seminar" => $alasanSeminar,
+			];
+			unset($_SESSION["seminar_errors"]);
+		} else {
+			$_SESSION["seminar_errors"] = $errorsSeminar;
+		}
+
+		header("Location: index.php#seminar");
+		exit;
+	}
+
 	// Menyimpan setiap nilai formulir ke dalam session secara terpisah.
 	$_SESSION["nama"] = $nama;
 	$_SESSION["email"] = $email;
@@ -326,6 +370,30 @@ switch ($programStudi) {
 				<button type="reset">Batal</button>
 				<p id="seminarFeedback" class="form-feedback" aria-live="polite"></p>
 			</form>
+
+			<?php if (!empty($_SESSION["seminar_errors"])): ?>
+				<article class="submission-result" aria-live="polite">
+					<h3>Terjadi Kesalahan Input:</h3>
+					<ul>
+						<?php foreach ($_SESSION["seminar_errors"] as $err): ?>
+							<li><?= htmlspecialchars($err, ENT_QUOTES, "UTF-8") ?></li>
+						<?php endforeach; ?>
+					</ul>
+				</article>
+				<?php unset($_SESSION["seminar_errors"]); ?>
+			<?php endif; ?>
+
+			<?php if (isset($_SESSION["seminar_data"])): ?>
+				<?php $seminarData = $_SESSION["seminar_data"]; ?>
+				<article id="hasilSeminar" class="submission-result" aria-live="polite">
+					<h3>Data Pendaftaran Seminar Berhasil Dikirim</h3>
+					<p><strong>Nama Peserta:</strong> <?= htmlspecialchars($seminarData["nama_peserta"], ENT_QUOTES, "UTF-8") ?></p>
+					<p><strong>NIM:</strong> <?= htmlspecialchars($seminarData["nim_peserta"], ENT_QUOTES, "UTF-8") ?></p>
+					<p><strong>Program Studi:</strong> <?= htmlspecialchars($seminarData["prodi_peserta"], ENT_QUOTES, "UTF-8") ?></p>
+					<p><strong>Pilihan Seminar:</strong> <?= htmlspecialchars($seminarData["pilihan_seminar"], ENT_QUOTES, "UTF-8") ?></p>
+					<p><strong>Alasan Mengikuti Seminar:</strong> <?= nl2br(htmlspecialchars($seminarData["alasan_seminar"], ENT_QUOTES, "UTF-8")) ?></p>
+				</article>
+			<?php endif; ?>
 		</section>
 	</main>
 
