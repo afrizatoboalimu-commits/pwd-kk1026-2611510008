@@ -184,6 +184,7 @@ switch ($programStudi) {
 			</p>
 
 			<form id="contactForm" class="js-contact-form" data-validation="contact" action="index.php" method="post" novalidate>
+				<input type="hidden" name="form_type" value="contact" />
 				<div class="form-group">
 					<label for="nama">Nama Lengkap</label><br />
 
