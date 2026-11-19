@@ -126,3 +126,46 @@ contactForms.forEach((contactForm) => {
     }
   });
 });
+
+const seminarForm = document.getElementById("seminarForm");
+const seminarFeedback = document.getElementById("seminarFeedback");
+
+if (seminarForm) {
+	seminarForm.addEventListener("submit", function (event) {
+		const namaPeserta = document.getElementById("nama_peserta").value.trim();
+		const nimPeserta = document.getElementById("nim_peserta").value.trim();
+		const prodiPeserta = document.getElementById("prodi_peserta").value;
+		const pilihanSeminar = document.getElementById("pilihan_seminar").value;
+		const alasanSeminar = document.getElementById("alasan_seminar").value.trim();
+
+		let pesanError = "";
+
+		if (namaPeserta.length < 3) {
+			pesanError = "Nama Peserta minimal terdiri dari 3 karakter.";
+		} else if (!/^[0-9]{8,12}$/.test(nimPeserta)) {
+			pesanError = "NIM harus berupa angka (8–12 digit).";
+		} else if (prodiPeserta === "") {
+			pesanError = "Silakan pilih Program Studi terlebih dahulu.";
+		} else if (pilihanSeminar === "") {
+			pesanError = "Silakan pilih topik Seminar terlebih dahulu.";
+		} else if (alasanSeminar.length < 10) {
+			pesanError = "Alasan mengikuti seminar minimal 10 karakter.";
+		}
+
+		if (pesanError !== "") {
+			event.preventDefault();
+			if (seminarFeedback) {
+				seminarFeedback.textContent = pesanError;
+				seminarFeedback.style.color = "red";
+			}
+		} else if (seminarFeedback) {
+			seminarFeedback.textContent = "";
+		}
+	});
+
+	seminarForm.addEventListener("reset", function () {
+		if (seminarFeedback) {
+			seminarFeedback.textContent = "";
+		}
+	});
+}
